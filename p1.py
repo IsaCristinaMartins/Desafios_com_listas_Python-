@@ -2,6 +2,8 @@
 
 print("Ola, você irá digitar 5 números inteiros aleatórios")
 
+
+
 vetorResposta=[]
 
 for i in range (0,5):

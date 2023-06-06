@@ -9,8 +9,8 @@ for i in range (1):
     palavra.append(a) 
 
 #Analisar cada letra e sua semelhança com vogais. Vogais vai pro vetor vogal, consoante vetor consoante.  
-    for b in (palavra):
-        if b == ("a" or "e" or "i" or "o" or "u"):
+    for b in a:
+        if b == "a" or b =="e" or b == "i" or b =="o" or b== "u":
             vogais.append(b)
         else: 
             consoantes.append(b)
