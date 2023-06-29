@@ -12,7 +12,7 @@ contador = [0]*23
 votos=0
 
 while True:
-    m = int (input(f"Digite o número do melhor jogador"))
+    m = int (input(f"Digite o número do melhor jogador, pra encerrar digite 0  "))
     if m == 0:       
         break
     elif m < 0 or m > 23:
@@ -25,15 +25,21 @@ def media():
     k=sum(contador)/len(contador)
     return k
 
-def porcente(v):
-    l = [x/sum(v) for x in v]
-    return l 
+def cal_porcentagem(v):
+    calculo = [x/sum(v) for x in v]
+    return calculo 
 
-print(f"{contador}")
+#print(f"{contador}")  --> print pra teste de leitura de votos.
 
+print(f"Enquete: Quem foi o melhor jogador?")
+
+#Aqui é a lista de votos que cada jogador recebeu
 for h in range (0,23):
     print(f"Número de votos do jogador {h+1}º foi {contador[h]}")
 
+
+#print (f"A média dos votos computados foram: {media()} votos")  --> teste de execução
+print(f"Resultado da votação:")
 print (f"Foram computados {sum(contador)} votos")  
-print (f"A média dos votos computador foram: {media()}")  
-print (f"A porcentagem dos votos é: {porcente(contador)}")  
+print ("A porcentagem dos votos é: {:.2f}%".format(cal_porcentagem(contador)))  
+
